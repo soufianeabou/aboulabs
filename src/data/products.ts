@@ -1,4 +1,5 @@
 export type ProductType = 'web' | 'mobile'
+export type ProductStatus = 'beta' | 'coming-soon'
 
 export interface Product {
   id: string
@@ -11,6 +12,8 @@ export interface Product {
   type: ProductType
   logo?: string
   screenshot?: string
+  status?: ProductStatus
+  anchor: string
 }
 
 export const products: Product[] = [
@@ -24,6 +27,8 @@ export const products: Product[] = [
     features: ['Garage Management', 'Repair Workflow', 'Invoicing', 'Customer Tracking', 'Analytics'],
     type: 'web',
     logo: '/logos/pcs-logo.png',
+    status: 'beta',
+    anchor: 'product-pcs',
   },
   {
     id: 'cabinet',
@@ -35,6 +40,8 @@ export const products: Product[] = [
     features: ['Case Management', 'Client Profiles', 'Document Hub', 'Billing', 'Deadlines'],
     type: 'web',
     logo: '/logos/cabinet-logo.png',
+    status: 'beta',
+    anchor: 'product-cabinet',
   },
   {
     id: 'edupath',
@@ -46,6 +53,8 @@ export const products: Product[] = [
     features: ['Curriculum Builder', 'Progress Tracking', 'Parent Portal', 'Assignments', 'Gradebook'],
     type: 'web',
     logo: '/logos/edupath-logo.png',
+    status: 'coming-soon',
+    anchor: 'product-edupath',
   },
   {
     id: 'maw9if',
@@ -57,5 +66,7 @@ export const products: Product[] = [
     features: ['Artisan Profiles', 'Service Booking', 'Reviews', 'Location-Based', 'Messaging'],
     type: 'mobile',
     logo: '/logos/maw9if-logo.png',
+    status: 'coming-soon',
+    anchor: 'product-maw9if',
   },
 ]
